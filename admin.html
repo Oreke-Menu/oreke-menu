@@ -39,6 +39,7 @@
   }
   .btn-gold{ background:var(--gold); color:var(--ink); }
   .btn-outline{ background:transparent; color:var(--cream); border:1px solid var(--terracotta); }
+  .btn-outline-onlight{ background:transparent; color:var(--ink); border:1px solid var(--terracotta); }
   .btn-danger{ background:transparent; color:var(--danger); border:1px solid var(--danger); }
   .btn-sm{ padding:7px 12px; font-size:12.5px; }
   #status{ font-size:13px; margin-top:10px; min-height:18px; }
@@ -344,7 +345,7 @@
         const actions = row.querySelector('.dish-actions');
 
         const editBtn = document.createElement('button');
-        editBtn.className = 'btn-outline btn-sm';
+        editBtn.className = 'btn-outline-onlight btn-sm';
         editBtn.textContent = 'Редактировать';
         actions.appendChild(editBtn);
 
@@ -403,7 +404,7 @@
             }
             renderCategories();
           });
-          row.appendChild(editForm);
+          row.querySelector('.dish-info').appendChild(editForm);
         });
       });
 
