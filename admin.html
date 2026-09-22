@@ -201,7 +201,16 @@
       if(!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       window._sha = data.sha;
-      const json = base64ToUtf8(data.content);
+      let json;
+      if(data.content){
+        json = base64ToUtf8(data.content);
+      }else if(data.download_url){
+        const rawRes = await fetch(data.download_url);
+        if(!rawRes.ok) throw new Error('Не удалось загрузить содержимое файла');
+        json = await rawRes.text();
+      }else{
+        throw new Error('Файл слишком большой для загрузки через API');
+      }
       const parsed = JSON.parse(json);
       state.categories = parsed.categories || [];
       state.categories.sort((a, b) => (a.order || 999) - (b.order || 999));
