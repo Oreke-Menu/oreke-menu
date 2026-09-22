@@ -64,7 +64,19 @@
   .dish-name{ font-weight:600; font-size:14.5px; }
   .dish-price{ font-size:13px; color:var(--terracotta); font-weight:600; white-space:nowrap; }
   .dish-desc{ font-size:12.5px; color:#6b5c4c; margin-top:3px; line-height:1.4; }
-  .dish-actions{ margin-top:6px; }
+  .dish-actions{ margin-top:6px; display:flex; gap:8px; }
+  .edit-dish-form{
+    border-top:1px solid rgba(36,28,22,0.12); padding-top:12px; margin-top:10px;
+  }
+  .edit-dish-form label{ color:#6b5c4c; }
+  .edit-dish-form input, .edit-dish-form textarea{
+    border-color:rgba(36,28,22,0.2); color:var(--ink);
+  }
+  .cat-order{
+    width:56px; padding:6px 8px; border-radius:6px;
+    border:1px solid rgba(36,28,22,0.2); color:var(--ink);
+    font-size:13px; text-align:center; margin-right:10px;
+  }
 
   .add-dish-form{
     border-top:1px solid rgba(36,28,22,0.12); padding-top:14px; margin-top:6px;
@@ -113,6 +125,12 @@
       <input type="text" id="newCatName" placeholder="Например: Десерты">
       <button class="btn-gold btn-sm" id="addCatBtn">Добавить</button>
     </div>
+  </div>
+
+  <div class="panel">
+    <h2>Порядок категорий</h2>
+    <p style="font-size:12.5px; color:var(--muted); margin:0 0 12px; line-height:1.5;">У каждой категории ниже есть поле с номером. Присвойте номера от 1 до N (1 — будет первой на сайте) и нажмите «Применить порядок».</p>
+    <button class="btn-outline btn-sm" id="applyOrderBtn">Применить порядок</button>
   </div>
 
   <div id="categories"></div>
@@ -186,6 +204,7 @@
       const json = base64ToUtf8(data.content);
       const parsed = JSON.parse(json);
       state.categories = parsed.categories || [];
+      state.categories.sort((a, b) => (a.order || 999) - (b.order || 999));
       renderCategories();
       setStatus('Меню загружено.', 'ok');
     }catch(err){
@@ -273,13 +292,25 @@
 
   function renderCategories(){
     els.categories.innerHTML = '';
-    state.categories.forEach(cat => {
+    state.categories.forEach((cat, idx) => {
+      if(cat.order === undefined || cat.order === null){
+        cat.order = idx + 1;
+      }
       const catDiv = document.createElement('div');
       catDiv.className = 'cat';
 
       const head = document.createElement('div');
       head.className = 'cat-head';
-      head.innerHTML = `<h3>${cat.name}</h3>`;
+      head.innerHTML = `
+        <div style="display:flex; align-items:center;">
+          <input type="number" class="cat-order" min="1" value="${cat.order}">
+          <h3>${cat.name}</h3>
+        </div>
+      `;
+      const orderInput = head.querySelector('.cat-order');
+      orderInput.addEventListener('change', () => {
+        cat.order = parseInt(orderInput.value, 10) || 1;
+      });
       const delCatBtn = document.createElement('button');
       delCatBtn.className = 'btn-danger btn-sm';
       delCatBtn.textContent = 'Удалить категорию';
@@ -301,12 +332,70 @@
             <div class="dish-actions"></div>
           </div>
         `;
+        const actions = row.querySelector('.dish-actions');
+
+        const editBtn = document.createElement('button');
+        editBtn.className = 'btn-outline btn-sm';
+        editBtn.textContent = 'Редактировать';
+        actions.appendChild(editBtn);
+
         const delBtn = document.createElement('button');
         delBtn.className = 'btn-danger btn-sm';
         delBtn.textContent = 'Удалить блюдо';
         delBtn.addEventListener('click', () => removeDish(cat.id, dish.id));
-        row.querySelector('.dish-actions').appendChild(delBtn);
+        actions.appendChild(delBtn);
+
         catDiv.appendChild(row);
+
+        let editForm = null;
+        editBtn.addEventListener('click', () => {
+          if(editForm){
+            editForm.remove();
+            editForm = null;
+            editBtn.textContent = 'Редактировать';
+            return;
+          }
+          editBtn.textContent = 'Свернуть';
+          editForm = document.createElement('div');
+          editForm.className = 'edit-dish-form';
+          editForm.innerHTML = `
+            <label>Название блюда</label>
+            <input type="text" class="ef-name" value="${dish.name.replace(/"/g, '&quot;')}">
+            <div class="row2">
+              <div>
+                <label>Цена</label>
+                <input type="text" class="ef-price" value="${(dish.price || '').replace(/"/g, '&quot;')}">
+              </div>
+              <div>
+                <label>Новое фото (необязательно)</label>
+                <input type="file" class="ef-photo" accept="image/*">
+              </div>
+            </div>
+            <label>Описание</label>
+            <textarea class="ef-desc">${dish.desc || ''}</textarea>
+            <div style="margin-top:10px; display:flex; gap:8px;">
+              <button class="btn-gold btn-sm ef-save">Сохранить изменения блюда</button>
+            </div>
+          `;
+          const saveBtn = editForm.querySelector('.ef-save');
+          saveBtn.addEventListener('click', async () => {
+            const newName = editForm.querySelector('.ef-name').value.trim();
+            if(!newName){ alert('Введите название блюда'); return; }
+            dish.name = newName;
+            dish.price = editForm.querySelector('.ef-price').value.trim();
+            dish.desc = editForm.querySelector('.ef-desc').value.trim();
+            const fileInput = editForm.querySelector('.ef-photo');
+            if(fileInput.files[0]){
+              saveBtn.textContent = 'Обрабатываю фото...';
+              saveBtn.disabled = true;
+              try{
+                dish.photo = await resizeImage(fileInput.files[0], 640, 0.72);
+              }catch(e){}
+            }
+            renderCategories();
+          });
+          row.appendChild(editForm);
+        });
       });
 
       const form = document.createElement('div');
@@ -356,9 +445,17 @@
     });
   }
 
+  function applyOrder(){
+    state.categories.sort((a, b) => (a.order || 0) - (b.order || 0));
+    state.categories.forEach((cat, idx) => { cat.order = idx + 1; });
+    renderCategories();
+    setStatus('Порядок применён. Не забудьте нажать "Сохранить изменения на GitHub".', 'ok');
+  }
+
   document.getElementById('loadBtn').addEventListener('click', loadMenu);
   document.getElementById('saveBtn').addEventListener('click', saveMenu);
   document.getElementById('addCatBtn').addEventListener('click', addCategory);
+  document.getElementById('applyOrderBtn').addEventListener('click', applyOrder);
   document.getElementById('restaurantSelect').addEventListener('change', () => {
     state.categories = [];
     window._sha = null;
