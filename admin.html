@@ -184,6 +184,29 @@
     return `https://api.github.com/repos/${els.owner.value.trim()}/${els.repo.value.trim()}/contents/${file}`;
   }
 
+  function explainGithubError(status, message){
+    const text = (message || '').toLowerCase();
+    if(status === 401 || text.includes('bad credentials')){
+      return 'Ошибка авторизации: токен недействителен или истёк. Создайте новый Personal Access Token и вставьте его заново.';
+    }
+    if(status === 403 && text.includes('rate limit')){
+      return 'Ошибка авторизации: превышен лимит запросов к GitHub. Подождите пару минут и попробуйте снова.';
+    }
+    if(status === 403){
+      return 'Ошибка авторизации: у токена нет прав на этот репозиторий (нужны права Contents: Read and write).';
+    }
+    if(status === 413 || text.includes('too large') || text.includes('exceed') || text.includes('quota') || text.includes('size')){
+      return 'Не хватает места: файл меню стал слишком большим для сохранения. Удалите часть фото или сожмите их сильнее.';
+    }
+    if(status === 409){
+      return 'Файл был изменён в другом месте, пока вы редактировали. Нажмите «Загрузить текущее меню» и повторите правки.';
+    }
+    if(status === 404){
+      return 'Репозиторий или файл не найдены. Проверьте логин, название репозитория и ресторан в списке выше.';
+    }
+    return 'Ошибка (' + (status || '—') + '): ' + (message || 'неизвестная причина');
+  }
+
   async function loadMenu(){
     if(!els.owner.value.trim() || !els.repo.value.trim() || !els.token.value.trim()){
       setStatus('Заполните логин, репозиторий и токен.', 'err');
@@ -199,7 +222,10 @@
         setStatus('Файл меню ещё не создан — начните добавлять категории.', 'ok');
         return;
       }
-      if(!res.ok) throw new Error('HTTP ' + res.status);
+      if(!res.ok){
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(explainGithubError(res.status, errData.message));
+      }
       const data = await res.json();
       window._sha = data.sha;
       let json;
@@ -210,7 +236,7 @@
         if(!rawRes.ok) throw new Error('Не удалось загрузить содержимое файла');
         json = await rawRes.text();
       }else{
-        throw new Error('Файл слишком большой для загрузки через API');
+        throw new Error('Не хватает места: файл слишком большой для загрузки через API GitHub.');
       }
       const parsed = JSON.parse(json);
       state.categories = parsed.categories || [];
@@ -241,7 +267,7 @@
       });
       if(!res.ok){
         const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.message || ('HTTP ' + res.status));
+        throw new Error(explainGithubError(res.status, errData.message));
       }
       const data = await res.json();
       window._sha = data.content.sha;
