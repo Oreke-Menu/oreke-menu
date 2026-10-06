@@ -815,7 +815,71 @@
     {
       "id": "zousms7o",
       "name": "Компанияға арналған тағамдар(Тарсырысқа)/Блюда на компанию(На заказ)",
-      "dishes": [],
+      "dishes": [
+        {
+          "id": "s2faolm3",
+          "name": "Бесбармақ",
+          "price": "9000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "9b6ssm8y",
+          "name": "Қуырдақ",
+          "price": "16500",
+          "desc": "Жылқы еті/Конина",
+          "photo": null
+        },
+        {
+          "id": "dreqd7pu",
+          "name": "Люля көкөністермен/Люля с овощами",
+          "price": "15000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "ezsyzr61",
+          "name": "Мерекелік палау/Плов праздничный",
+          "price": "12000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "3wa7r3c5",
+          "name": "Қой қабырғалары/Ребра по домашнему",
+          "price": "13000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "yridyfdl",
+          "name": "Қуырдақ",
+          "price": "19000",
+          "desc": "Қой еті/Баранина",
+          "photo": null
+        },
+        {
+          "id": "ft2uxyiy",
+          "name": "Оджахури",
+          "price": "17000",
+          "desc": "Қой еті/Баранина",
+          "photo": null
+        },
+        {
+          "id": "esmq0gla",
+          "name": "Хого",
+          "price": "12000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "hg9nxjnb",
+          "name": "Гуляш",
+          "price": "13000",
+          "desc": "",
+          "photo": null
+        }
+      ],
       "order": 6
     },
     {
