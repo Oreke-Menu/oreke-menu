@@ -535,6 +535,13 @@
           "price": "3200",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "2mxcrmv4",
+          "name": "Семга сорпасы/Уха из семги",
+          "price": "2800",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 4
