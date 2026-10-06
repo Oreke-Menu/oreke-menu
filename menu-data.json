@@ -570,6 +570,20 @@
           "price": "2200",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "fse96pbz",
+          "name": "Рамен",
+          "price": "2000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "psphpjeq",
+          "name": "Салқын сорпа етпен/Окрошка мясная",
+          "price": "2000",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 4
