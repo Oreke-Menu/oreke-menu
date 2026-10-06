@@ -626,6 +626,41 @@
           "price": "2800",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "35cf23tz",
+          "name": "Бризоль гарнирмен/Бризоль с гарниром",
+          "price": "2200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "3n0n8d76",
+          "name": "Фри етпен/Фри с мясом",
+          "price": "2800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "3od85lh3",
+          "name": "Бефстроганов",
+          "price": "26000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "llpmbu69",
+          "name": "қуырылған манты/Жаренные манты",
+          "price": "2200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "cl7x0k6p",
+          "name": "Манты",
+          "price": "2000",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 5
