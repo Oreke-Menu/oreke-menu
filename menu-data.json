@@ -661,6 +661,41 @@
           "price": "2000",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "dfrz1j2l",
+          "name": "Палау/Плов",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "f6427syf",
+          "name": "Тай стиліндегі ет/Мясо по-тайски",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "qtlporkf",
+          "name": "Дапанджи",
+          "price": "3000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "3ev1ystz",
+          "name": "Фрикасе",
+          "price": "2700",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "16nmwyk9",
+          "name": "Фетучини",
+          "price": "2500",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 5
