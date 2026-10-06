@@ -1032,6 +1032,13 @@
           "price": "6500",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "ask2ebgo",
+          "name": "Ұлттық ассортиі/Асоорти национальное",
+          "price": "8500",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 6
