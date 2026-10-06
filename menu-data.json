@@ -745,6 +745,69 @@
           "price": "2500",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "ukjqwzbd",
+          "name": "Қуырылған сазан/Сазан жареный",
+          "price": "2600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "yc9lf04q",
+          "name": "Форель",
+          "price": "3600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "5uf2ut9q",
+          "name": "Дорадо",
+          "price": "4500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "xe4spu1u",
+          "name": "Кілегей соусындағы семга стейкі/Стейк из семги в сливочном соусе",
+          "price": "6000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "8d2wm7zy",
+          "name": "Грилде піскен семга стейкі/Стейк из семги на гриле",
+          "price": "6000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "x9zvn8eq",
+          "name": "Тауық стейк/Куриный стейк",
+          "price": "3500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "ww4nhm8t",
+          "name": "Рибай",
+          "price": "6500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "hj6v28rt",
+          "name": "Антрекот",
+          "price": "6500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "j8gd4iw9",
+          "name": "T-BONE",
+          "price": "6500",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 5
