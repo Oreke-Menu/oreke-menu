@@ -1193,6 +1193,48 @@
           "price": "2200",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "bwz2zler",
+          "name": "Нан себеті",
+          "price": "2200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "55nj89un",
+          "name": "Нан бауырсақпен",
+          "price": "1200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "kc32t3b3",
+          "name": "Ассорти самса",
+          "price": "5000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "08hjazvd",
+          "name": "Бәліш/Пирожки",
+          "price": "250",
+          "desc": "Етпен,картоппен,орамжапырақпен/с мясом,с картошкой, с капустой",
+          "photo": null
+        },
+        {
+          "id": "xj4y9n1t",
+          "name": "Нан шелпек/Лепешки",
+          "price": "220",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "f80i3f0p",
+          "name": "Бауырсақ 1кг",
+          "price": "2200",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 8
