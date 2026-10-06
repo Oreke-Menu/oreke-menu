@@ -528,6 +528,13 @@
           "price": "2100",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "k34vz386",
+          "name": "Том ям",
+          "price": "3200",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 4
