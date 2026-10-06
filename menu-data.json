@@ -1095,7 +1095,64 @@
     {
       "id": "yehbo9gt",
       "name": "Гарнирлер/Гарниры",
-      "dishes": [],
+      "dishes": [
+        {
+          "id": "zmkja2qq",
+          "name": "Картоп езбесі/Картофельное пюре",
+          "price": "800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "k3p18ljg",
+          "name": "Фри",
+          "price": "900",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "w3wv0h2c",
+          "name": "Картоп сыналары/Картофельные дольки",
+          "price": "900",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "c3odemy1",
+          "name": "Күріш/Рис",
+          "price": "600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "cxaypqbx",
+          "name": "Грилдегі көкөністер/Овощи гриль",
+          "price": "1200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "881qfnqt",
+          "name": "Қарақұмық/Гречка",
+          "price": "800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "nxx1q43q",
+          "name": "Көкөністер мен күріш/Рис с овощами",
+          "price": "1000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "s8gk66jx",
+          "name": "Вермишель күрішпен/Рис с вермишелью",
+          "price": "900",
+          "desc": "",
+          "photo": null
+        }
+      ],
       "order": 7
     },
     {
