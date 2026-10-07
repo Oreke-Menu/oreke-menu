@@ -465,7 +465,78 @@
     {
       "id": "tir0n4el",
       "name": "Бірінші тағамдар/Первые блюда",
-      "dishes": [],
+      "dishes": [
+        {
+          "id": "b7seme5t",
+          "name": "Щи",
+          "price": "1800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "rswp3qgo",
+          "name": "Тұшпара/Пелмени",
+          "price": "2000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "pbpele2z",
+          "name": "Борщ",
+          "price": "1800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "nrfg6qjt",
+          "name": "Шығыс сорпасы/Шорпа по-восточному",
+          "price": "2000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "94tvimvm",
+          "name": "Жасымық сорпасы/Суп чечевичный",
+          "price": "1500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "ovw7s76z",
+          "name": "Тұздық/Солянка",
+          "price": "2000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "s5zcr3va",
+          "name": "Сорпа буглама",
+          "price": "3000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "e04u2yx5",
+          "name": "Салқын сорпа/Окрошка",
+          "price": "2200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "o7ira641",
+          "name": "Нарын",
+          "price": "2100",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "npix82ih",
+          "name": "Том ям",
+          "price": "3200",
+          "desc": "",
+          "photo": null
+        }
+      ],
       "order": 5
     },
     {
