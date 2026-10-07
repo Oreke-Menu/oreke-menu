@@ -535,6 +535,20 @@
           "price": "3200",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "oav4fgeu",
+          "name": "Семга сорпасы/Уха из семги",
+          "price": "2800",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "zv22hd1h",
+          "name": "Сазан сорпасы/Уха из сазана",
+          "price": "1800",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 5
