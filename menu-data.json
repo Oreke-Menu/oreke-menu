@@ -1928,6 +1928,48 @@
           "price": "2700",
           "desc": "Томат, соус, моцарелла, қазы",
           "photo": null
+        },
+        {
+          "id": "y6qrehvp",
+          "name": "Чикен",
+          "price": "1500",
+          "desc": "6 дана/6 штук",
+          "photo": null
+        },
+        {
+          "id": "imlqr6ug",
+          "name": "Чикен",
+          "price": "2000",
+          "desc": "10 дана/10 штук",
+          "photo": null
+        },
+        {
+          "id": "n7dioja3",
+          "name": "Чикен",
+          "price": "4300",
+          "desc": "24 дана/24 штук",
+          "photo": null
+        },
+        {
+          "id": "ktthahet",
+          "name": "Чикен",
+          "price": "5400",
+          "desc": "30 дана/30 штук",
+          "photo": null
+        },
+        {
+          "id": "w51mjehh",
+          "name": "Фри",
+          "price": "900",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "0fyjwjl5",
+          "name": "Байтсы",
+          "price": "1800",
+          "desc": "25 дана/25 штук + сырный соус + терияки соус",
+          "photo": null
         }
       ],
       "order": 12
