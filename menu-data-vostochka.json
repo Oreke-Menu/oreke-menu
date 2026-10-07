@@ -241,6 +241,55 @@
           "price": "2600",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "7xlicdwo",
+          "name": "Шығыстық/Восточный",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "l0vjxxv7",
+          "name": "Бас аспаздан/От шеф повара",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "r5q2lc85",
+          "name": "Кавказ саңырауқұлақтары/Грибы по-кавказски",
+          "price": "2300",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "7bx2oloj",
+          "name": "Мажор",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "2m84bk7v",
+          "name": "Салат пай",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "c34oqdyb",
+          "name": "Жазғы балғын/Летняя свежесть",
+          "price": "1600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "d5bugi7o",
+          "name": "ЧА-ЧА-ЧА",
+          "price": "2300",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 3
