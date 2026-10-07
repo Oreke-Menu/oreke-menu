@@ -290,6 +290,34 @@
           "price": "2300",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "jkzshp9q",
+          "name": "Премиум",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "fjy7b4k0",
+          "name": "Красный бархат",
+          "price": "2200",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "ans4132l",
+          "name": "Нежность",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "tqlnbqx6",
+          "name": "Крабовый",
+          "price": "2100",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 3
