@@ -185,6 +185,62 @@
           "price": "2300",
           "desc": "",
           "photo": null
+        },
+        {
+          "id": "pqbh0ivl",
+          "name": "Мерекелік/Праздничный",
+          "price": "2600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "cdrp7pu6",
+          "name": "Французский",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "i0525amb",
+          "name": "Греческий",
+          "price": "2300",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "rm6js4yd",
+          "name": "Диеталық/Диетический",
+          "price": "2300",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "rrd172q9",
+          "name": "Малибу",
+          "price": "2500",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "8txnyzca",
+          "name": "Пекинский",
+          "price": "2000",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "h875nob2",
+          "name": "Пайдалы/Полезный",
+          "price": "2600",
+          "desc": "",
+          "photo": null
+        },
+        {
+          "id": "g41i3lfr",
+          "name": "Тәтті және қышқыл тұздықтан баялды/Баклажаны в кисло-сладком соусе",
+          "price": "2600",
+          "desc": "",
+          "photo": null
         }
       ],
       "order": 3
